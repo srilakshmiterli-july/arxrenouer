@@ -64,7 +64,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.focus-card, .featured-item, .project-card, .value-card, .skill-item, .education-item').forEach(el => {
+document.querySelectorAll('.focus-card, .featured-item, .project-card, .value-card, .skill-item, .education-item, .step-card').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
 });
@@ -95,8 +95,12 @@ if (contactForm) {
         }
 
         if (valid) {
-            alert('Thank you for your message! I will get back to you soon.');
-            contactForm.reset();
+            const to = contactForm.dataset.to || 'hello@arxrenouer.com';
+            const val = id => (document.getElementById(id) || {}).value || '';
+            const subject = 'Consultation request' + (val('subject') ? ' — ' + val('subject') : '');
+            const body = ['Name: ' + val('name'), 'Email: ' + val('email'), 'Phone: ' + val('phone'),
+                'Project type: ' + val('subject'), 'Location: ' + val('location'), 'Timeline: ' + val('timeline'), '', val('message')].join('\n');
+            window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         }
     });
 }
