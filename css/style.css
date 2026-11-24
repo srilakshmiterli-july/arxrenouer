@@ -1285,6 +1285,11 @@ img.arx-mark { width: auto !important; height: 44px !important; object-fit: cont
 .foot-lock img.arx-mark { height: 54px !important; }
 @media (max-width: 900px) { .navbar img.arx-mark { height: 36px !important; } }
 
+/* === Statement banner === */
+.mk-statement { text-align: center; padding: 3rem 1.5rem; background: var(--color-text); border-radius: var(--radius); }
+.mk-statement-top { font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 1rem; letter-spacing: 0.25em; text-transform: uppercase; color: #C4A882; margin-bottom: 1rem; }
+.mk-statement-quote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.6rem, 3.5vw, 2.4rem); color: #fff; line-height: 1.4; max-width: 600px; margin: 0 auto; }
+
 /* === Founder photo === */
 .mk-founder { grid-template-columns: 300px 1fr; gap: 2rem; }
 .mk-photo { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: 6px; }
