@@ -1281,7 +1281,7 @@ h1 em, h2 em, h3 em, .page-title em { font-family: 'Cormorant Garamond', serif; 
 
 /* === Citadel logo === */
 img.arx-mark { width: auto !important; height: 90px !important; object-fit: contain; }
-.navbar img.arx-mark { height: 62px !important; }
+.navbar img.arx-mark { height: 78px !important; }
 .foot-lock img.arx-mark { height: 90px !important; }
 @media (max-width: 900px) { .navbar img.arx-mark { height: 64px !important; } }
 
