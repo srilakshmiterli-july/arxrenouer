@@ -1188,9 +1188,9 @@ h1 em, h2 em, h3 em, .page-title em { font-family: 'Cormorant Garamond', serif; 
 .arx-wm { display: flex; flex-direction: column; }
 .arx-wm .logo { font-family: 'Gloock', serif; font-size: 1.3rem; letter-spacing: 0.1em; line-height: 1; text-transform: uppercase; }
 .arx-wm .brand-subtitle { font-size: 0.58rem; letter-spacing: 0.32em; text-transform: uppercase; margin-top: 4px; color: var(--color-text); }
-.nav-links a { font-family: 'Montserrat', sans-serif; text-transform: none; letter-spacing: 0.02em; font-size: 0.9rem; }
+.nav-links a { font-family: 'Montserrat', sans-serif; text-transform: none; letter-spacing: 0.02em; font-size: 1.05rem; }
 .nav-links a.active { color: var(--color-accent); border-bottom: 2px solid var(--color-accent); }
-.nav-links .nav-cta { background: var(--color-text); color: #fff !important; border-radius: 30px; padding: 0.5rem 1.1rem; border-bottom: none !important; font-weight: 600; font-size: 0.8rem; }
+.nav-links .nav-cta { background: var(--color-text); color: #fff !important; border-radius: 30px; padding: 0.5rem 1.1rem; border-bottom: none !important; font-weight: 600; font-size: 0.95rem; }
 .nav-links .nav-cta:hover { background: var(--color-accent); }
 .btn { border-radius: 30px; background: var(--color-text); border-color: var(--color-text); }
 .btn:hover { background: var(--color-accent); border-color: var(--color-accent); }
@@ -1266,8 +1266,8 @@ h1 em, h2 em, h3 em, .page-title em { font-family: 'Cormorant Garamond', serif; 
 /* === Bigger brand lockup === */
 .navbar { padding: 1rem 3rem; }
 .navbar .arx-mark { width: 52px; height: 52px; }
-.navbar .arx-wm .logo { font-size: 2rem; letter-spacing: 0.12em; }
-.navbar .arx-wm .brand-subtitle { font-size: 0.72rem; letter-spacing: 0.4em; margin-top: 6px; color: var(--color-accent); font-weight: 600; }
+.navbar .arx-wm .logo { font-size: 2.4rem; letter-spacing: 0.12em; }
+.navbar .arx-wm .brand-subtitle { font-size: 0.85rem; letter-spacing: 0.4em; margin-top: 6px; color: var(--color-accent); font-weight: 600; }
 .mk-hero, .mk-banner { margin-top: 86px; }
 .foot-lock .arx-mark { width: 60px; height: 60px; }
 .foot-lock .arx-wm .logo { font-size: 2.2rem; }
