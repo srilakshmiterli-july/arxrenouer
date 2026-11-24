@@ -1262,3 +1262,25 @@ h1 em, h2 em, h3 em, .page-title em { font-family: 'Cormorant Garamond', serif; 
   .mk-hero-ov { padding: 2rem 1.5rem; } .mk-wrap { padding: 1.5rem; } .mk-band { flex-direction: column; gap: 1rem; text-align: center; }
   .mk-form { grid-template-columns: 1fr; } .mk-form .full { grid-column: auto; }
 }
+
+/* === Bigger brand lockup === */
+.navbar { padding: 1rem 3rem; }
+.navbar .arx-mark { width: 52px; height: 52px; }
+.navbar .arx-wm .logo { font-size: 2rem; letter-spacing: 0.12em; }
+.navbar .arx-wm .brand-subtitle { font-size: 0.72rem; letter-spacing: 0.4em; margin-top: 6px; color: var(--color-accent); font-weight: 600; }
+.mk-hero, .mk-banner { margin-top: 86px; }
+.foot-lock .arx-mark { width: 60px; height: 60px; }
+.foot-lock .arx-wm .logo { font-size: 2.2rem; }
+.foot-lock .arx-wm .brand-subtitle { font-size: 0.75rem; letter-spacing: 0.4em; }
+@media (max-width: 900px) {
+  .navbar .arx-mark { width: 40px; height: 40px; }
+  .navbar .arx-wm .logo { font-size: 1.5rem; }
+  .navbar .arx-wm .brand-subtitle { font-size: 0.6rem; letter-spacing: 0.3em; }
+  .mk-hero, .mk-banner { margin-top: 72px; }
+}
+
+/* === Citadel logo === */
+img.arx-mark { width: auto !important; height: 44px !important; object-fit: contain; }
+.navbar img.arx-mark { height: 46px !important; }
+.foot-lock img.arx-mark { height: 54px !important; }
+@media (max-width: 900px) { .navbar img.arx-mark { height: 36px !important; } }
