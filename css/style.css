@@ -1280,10 +1280,10 @@ h1 em, h2 em, h3 em, .page-title em { font-family: 'Cormorant Garamond', serif; 
 }
 
 /* === Citadel logo === */
-img.arx-mark { width: auto !important; height: 56px !important; object-fit: contain; }
-.navbar img.arx-mark { height: 60px !important; }
-.foot-lock img.arx-mark { height: 66px !important; }
-@media (max-width: 900px) { .navbar img.arx-mark { height: 44px !important; } }
+img.arx-mark { width: auto !important; height: 72px !important; object-fit: contain; }
+.navbar img.arx-mark { height: 80px !important; }
+.foot-lock img.arx-mark { height: 80px !important; }
+@media (max-width: 900px) { .navbar img.arx-mark { height: 54px !important; } }
 
 /* === Statement banner === */
 .mk-statement { text-align: center; padding: 3rem 1.5rem; background: var(--color-text); border-radius: var(--radius); }
