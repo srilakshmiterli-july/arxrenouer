@@ -26,24 +26,28 @@
     </nav>
 
     <section class="page-header">
-        <p class="section-label">Selected Work</p>
+        <p class="section-label">Portfolio</p>
         <h1 class="page-title">Our <em>Work</em></h1>
         <p class="page-description">Residential, commercial, and pavilion projects — each one shaped by a story.</p>
     </section>
 
     <section class="section">
-        <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="interior">Interior Design</button>
-            <button class="filter-btn" data-filter="architecture">Interior Architecture</button>
-            <button class="filter-btn" data-filter="hospitality">Hospitality</button>
-            <button class="filter-btn" data-filter="senior-living">Senior Living</button>
-            <button class="filter-btn" data-filter="space-planning">Space Planning</button>
-            <button class="filter-btn" data-filter="technical">Technical Documentation</button>
-            <button class="filter-btn" data-filter="visualization">Visualization</button>
-            <button class="filter-btn" data-filter="sustainability">Sustainability</button>
+        <div class="portfolio-tabs">
+            <button class="portfolio-tab active" data-tab="studio">Studio Projects</button>
+            <button class="portfolio-tab" data-tab="academic">Academic Projects</button>
         </div>
 
+        <!-- Studio Projects Tab -->
+        <div class="tab-content active" id="tab-studio">
+            <div class="tab-empty">
+                <h2>Coming Soon</h2>
+                <p>We are currently accepting new projects. If you have a space that needs a story, we'd love to hear from you.</p>
+                <a href="contact.html" class="mk-pill">Book a Consultation</a>
+            </div>
+        </div>
+
+        <!-- Academic Projects Tab -->
+        <div class="tab-content" id="tab-academic">
         <div class="projects-grid">
             <!-- Project 1 -->
             <div class="project-card" data-category="interior hospitality">
@@ -164,6 +168,7 @@
                     <a href="project-sustainability.html" class="btn btn-sm btn-outline">View Case Study</a>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 

@@ -1296,6 +1296,17 @@ img.arx-mark { width: auto !important; height: 44px !important; object-fit: cont
 .mk-tagline-quote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 4vw, 2.2rem); color: #fff; line-height: 1.4; max-width: 650px; margin: 0 auto; }
 .mk-tagline-quote em { color: #C4A882; font-style: italic; }
 
+/* === Portfolio tabs === */
+.portfolio-tabs { display: flex; gap: 0; border-bottom: 2px solid #e0dbd5; margin-bottom: 2rem; }
+.portfolio-tab { font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.8rem 1.5rem; background: none; border: none; border-bottom: 3px solid transparent; color: var(--color-text-light); cursor: pointer; transition: all 0.3s; margin-bottom: -2px; }
+.portfolio-tab:hover { color: var(--color-text); }
+.portfolio-tab.active { color: var(--color-text); border-bottom-color: var(--color-accent); font-weight: 600; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.tab-empty { text-align: center; padding: 4rem 1.5rem; background: #fff; border-radius: var(--radius); }
+.tab-empty h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 0.8rem; color: var(--color-text); }
+.tab-empty p { color: var(--color-text-light); max-width: 480px; margin: 0 auto 1.5rem; line-height: 1.6; }
+
 /* === Founder photo === */
 .mk-founder { grid-template-columns: 300px 1fr; gap: 2rem; }
 .mk-photo { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: 6px; }
