@@ -32,9 +32,11 @@ document.addEventListener('keydown', (e) => {
 document.querySelectorAll('.portfolio-tab').forEach(tab => {
     tab.addEventListener('click', () => {
         document.querySelectorAll('.portfolio-tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => { c.classList.remove('active'); c.style.display = ''; });
         tab.classList.add('active');
-        document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+        const target = document.getElementById('tab-' + tab.dataset.tab);
+        target.classList.add('active');
+        target.style.display = 'block';
     });
 });
 
