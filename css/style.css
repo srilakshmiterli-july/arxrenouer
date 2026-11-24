@@ -1183,7 +1183,7 @@ p {
 body { background: var(--color-bg); }
 h1 em, h2 em, h3 em, .page-title em { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--color-accent); font-weight: 500; }
 .navbar { background: rgba(255,255,255,0.97); padding: 0.9rem 3rem; }
-.arx-lock { display: flex !important; flex-direction: row !important; align-items: center; gap: 0.15rem; color: var(--color-text); }
+.arx-lock { display: flex !important; flex-direction: row !important; align-items: center; gap: 0.1rem; color: var(--color-text); }
 .arx-mark { width: 34px; height: 34px; color: var(--color-text); flex: none; }
 .arx-wm { display: flex; flex-direction: column; }
 .arx-wm .logo { font-family: 'Gloock', serif; font-size: 1.3rem; letter-spacing: 0.1em; line-height: 1; text-transform: uppercase; }
@@ -1281,7 +1281,7 @@ h1 em, h2 em, h3 em, .page-title em { font-family: 'Cormorant Garamond', serif; 
 
 /* === Citadel logo === */
 img.arx-mark { width: auto !important; height: 90px !important; object-fit: contain; }
-.navbar img.arx-mark { height: 100px !important; }
+.navbar img.arx-mark { height: 62px !important; }
 .foot-lock img.arx-mark { height: 90px !important; }
 @media (max-width: 900px) { .navbar img.arx-mark { height: 64px !important; } }
 
