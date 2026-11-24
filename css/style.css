@@ -1248,7 +1248,7 @@ h1 em, h2 em, h3 em, .page-title em { font-family: 'Cormorant Garamond', serif; 
 .mk-banner h1 { color: #fff; font-size: clamp(2.4rem, 5vw, 4rem); } .mk-banner h1 em { color: #F1DCC6; }
 .mk-banner p { color: #F1DCC6; letter-spacing: .12em; text-transform: uppercase; font-size: .85rem; max-width: none; }
 .mk-founder { display: grid; grid-template-columns: 140px 1fr; gap: 1.5rem; background: #fff; border-radius: var(--radius); padding: 1.4rem; align-items: center; }
-.mk-mono { width: 140px; height: 140px; background: var(--color-text); color: #fff; font-family: 'Gloock', serif; font-size: 3rem; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+.mk-mono { width: 140px; height: 140px; border-radius: 6px; object-fit: cover; }
 .mk-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; } .mk-pills span { background: var(--color-accent); color: #fff; border-radius: 20px; padding: 0.35rem 0.9rem; font-size: 0.85rem; }
 .mk-two { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; align-items: center; }
 .mk-two img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); }
