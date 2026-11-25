@@ -81,7 +81,7 @@ document.querySelectorAll('.focus-card, .featured-item, .project-card, .value-ca
     observer.observe(el);
 });
 
-// Contact Form Validation
+// Contact Form
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -90,6 +90,7 @@ if (contactForm) {
         const name = document.getElementById('name');
         const email = document.getElementById('email');
         const message = document.getElementById('message');
+        const status = document.getElementById('formStatus');
         let valid = true;
 
         [name, email, message].forEach(field => {
@@ -107,12 +108,30 @@ if (contactForm) {
         }
 
         if (valid) {
-            const to = contactForm.dataset.to || 'hello@arxrenouer.com';
-            const val = id => (document.getElementById(id) || {}).value || '';
-            const subject = 'Consultation request' + (val('subject') ? ' — ' + val('subject') : '');
-            const body = ['Name: ' + val('name'), 'Email: ' + val('email'), 'Phone: ' + val('phone'),
-                'Project type: ' + val('subject'), 'Location: ' + val('location'), 'Timeline: ' + val('timeline'), '', val('message')].join('\n');
-            window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            const btn = contactForm.querySelector('button[type="submit"]');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    contactForm.reset();
+                    status.textContent = 'Thank you! We received your message and will be in touch soon.';
+                    status.style.color = '#2C5F2D';
+                } else {
+                    status.textContent = 'Something went wrong. Please email us at hello@arxrenouer.com.';
+                    status.style.color = '#c44';
+                }
+            }).catch(() => {
+                status.textContent = 'Something went wrong. Please email us at hello@arxrenouer.com.';
+                status.style.color = '#c44';
+            }).finally(() => {
+                btn.disabled = false;
+                btn.textContent = 'Book a Consultation';
+            });
         }
     });
 }

@@ -38,7 +38,7 @@
     <section class="section">
         <div class="contact-grid">
             <div class="contact-form-wrapper">
-                <form class="contact-form mk-form" id="contactForm" novalidate data-to="hello@arxrenouer.com">
+                <form class="contact-form mk-form" id="contactForm" action="https://formspree.io/f/hello@arxrenouer.com" method="POST" novalidate>
                     <div class="form-group">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required aria-required="true">
@@ -83,7 +83,7 @@
                         <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="What is the space, and how do you want it to feel?"></textarea>
                     </div>
                     <button type="submit" class="btn full">Book a Consultation</button>
-                    <p class="form-note full">Submitting opens your email app with your details filled in.</p>
+                    <p class="form-note full" id="formStatus"></p>
                 </form>
             </div>
             <div class="contact-info">
