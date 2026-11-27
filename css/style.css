@@ -1216,7 +1216,7 @@ h1 em, h2 em, h3 em, .page-title em { font-family: 'Cormorant Garamond', serif; 
 .mk-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
 .mk-hero-ov { position: absolute; left: 0; right: 0; bottom: 0; padding: 3rem 4rem; background: linear-gradient(0deg, rgba(30,20,15,.65) 0%, rgba(30,20,15,.35) 60%, rgba(30,20,15,0) 100%); color: #fff; }
 .mk-kick { letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.4rem; }
-.mk-hero h1 { color: #fff; font-family: 'Gloock', serif; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.02; text-shadow: 0 2px 14px rgba(0,0,0,.35); max-width: none; }
+.mk-hero h1 { color: #fff; font-family: 'Gloock', serif; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.02; text-shadow: 0 2px 20px rgba(0,0,0,.5), 0 1px 6px rgba(0,0,0,.3); max-width: none; }
 .mk-hero h1 em { color: #F1DCC6; }
 .mk-pill { display: inline-block; background: #fff; color: var(--color-text); border-radius: 30px; padding: 0.7rem 1.4rem; font-weight: 600; font-size: 0.9rem; margin-top: 1rem; }
 .mk-pill.dark { background: var(--color-text); color: #fff; }
