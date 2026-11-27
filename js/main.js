@@ -130,7 +130,7 @@ if (contactForm) {
                 status.style.color = '#c44';
             }).finally(() => {
                 btn.disabled = false;
-                btn.textContent = 'Book a Consultation';
+                btn.textContent = 'Request a Consultation';
             });
         }
     });
