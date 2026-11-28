@@ -1389,15 +1389,16 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 .project-slider .slider-counter { display: none; }
 .project-slider .slide-caption {
     position: absolute;
-    bottom: 2.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
-    color: rgba(255,255,255,0.85);
+    padding: 2rem 1.5rem 0.75rem;
+    color: rgba(255,255,255,0.9);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     font-style: italic;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    background: linear-gradient(transparent, rgba(0,0,0,0.4));
     z-index: 10;
     pointer-events: none;
 }
@@ -1405,7 +1406,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     .project-slider .slider-arrow { width: 32px; height: 32px; font-size: 1rem; }
     .project-slider .slider-arrow.prev { left: 0.5rem; }
     .project-slider .slider-arrow.next { right: 0.5rem; }
-    .project-slider .slide-caption { font-size: 0.7rem; bottom: 2rem; left: 1rem; right: 1rem; }
+    .project-slider .slide-caption { font-size: 0.7rem; }
 }
 
 /* === Project Story Box === */
