@@ -136,6 +136,26 @@ if (contactForm) {
     });
 }
 
+// Lightbox
+(function() {
+    var overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<button class="lightbox-close" aria-label="Close">&times;</button><img>';
+    document.body.appendChild(overlay);
+    var lbImg = overlay.querySelector('img');
+    var close = function() { overlay.classList.remove('active'); setTimeout(function(){ overlay.style.display='none'; }, 250); };
+    overlay.addEventListener('click', close);
+    document.querySelectorAll('.case-study-section img').forEach(function(img) {
+        img.addEventListener('click', function() {
+            lbImg.src = this.src;
+            lbImg.alt = this.alt;
+            overlay.style.display = 'flex';
+            requestAnimationFrame(function(){ overlay.classList.add('active'); });
+        });
+    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+})();
+
 // Navbar compact on scroll
 const navbar = document.querySelector('.navbar');
 if (navbar) {
