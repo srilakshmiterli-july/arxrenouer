@@ -1340,10 +1340,10 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 /* === Project Image Slider === */
 .project-slider {
     position: relative;
-    width: 100%;
-    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
     overflow: hidden;
-    background: #0a0a0a;
+    background: #fff;
 }
 .project-slider .slider-track {
     display: flex;
@@ -1352,82 +1352,81 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 .project-slider .slider-slide {
     min-width: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .project-slider .slider-slide img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
     height: auto;
     display: block;
     cursor: default;
+    margin: 0 auto;
 }
 .project-slider .slider-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    border: none;
-    width: 48px;
-    height: 48px;
+    background: rgba(255,255,255,0.85);
+    color: #333;
+    border: 1px solid rgba(0,0,0,0.1);
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.project-slider .slider-arrow:hover { background: rgba(0,0,0,0.7); }
-.project-slider .slider-arrow.prev { left: 1.5rem; }
-.project-slider .slider-arrow.next { right: 1.5rem; }
+.project-slider .slider-arrow:hover { background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+.project-slider .slider-arrow.prev { left: 0.5rem; }
+.project-slider .slider-arrow.next { right: 0.5rem; }
 .project-slider .slider-dots {
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
+    padding: 1rem 0 0.5rem;
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
-    z-index: 10;
 }
 .project-slider .slider-dots .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.4);
+    background: rgba(0,0,0,0.2);
     border: none;
     cursor: pointer;
     transition: background 0.3s;
     padding: 0;
 }
-.project-slider .slider-dots .dot.active { background: #fff; }
+.project-slider .slider-dots .dot.active { background: rgba(0,0,0,0.6); }
 .project-slider .slider-counter {
-    position: absolute;
-    bottom: 1.25rem;
-    right: 1.5rem;
-    color: rgba(255,255,255,0.7);
+    text-align: right;
+    padding: 0.25rem 1.5rem 0.5rem;
+    color: rgba(0,0,0,0.4);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.85rem;
     letter-spacing: 0.05em;
-    z-index: 10;
 }
 .project-slider .slide-caption {
-    position: absolute;
-    bottom: 3.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 0.5rem 1.5rem 0;
+    color: rgba(0,0,0,0.5);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
-    text-align: center;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
-    z-index: 10;
-    pointer-events: none;
+    font-style: italic;
 }
 @media (max-width: 768px) {
-    .project-slider .slider-arrow { width: 36px; height: 36px; font-size: 1.2rem; }
-    .project-slider .slider-arrow.prev { left: 0.75rem; }
-    .project-slider .slider-arrow.next { right: 0.75rem; }
-    .project-slider .slide-caption { font-size: 0.7rem; bottom: 3rem; left: 1rem; right: 1rem; }
+    .project-slider .slider-arrow { width: 32px; height: 32px; font-size: 1rem; }
+    .project-slider .slider-arrow.prev { left: 0.5rem; }
+    .project-slider .slider-arrow.next { right: 0.5rem; }
+    .project-slider .slide-caption { font-size: 0.7rem; }
 }
 
 /* === Project Story Box === */
