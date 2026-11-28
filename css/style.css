@@ -1479,6 +1479,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     line-height: 1.8;
     color: #c9bfb4;
     margin-bottom: 1rem;
+    text-align: justify;
 }
 .project-story blockquote {
     border-left: 3px solid #8a7560;
