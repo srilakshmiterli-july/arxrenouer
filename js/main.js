@@ -159,24 +159,51 @@ if (contactForm) {
 // Project Image Slider
 document.querySelectorAll('.project-slider').forEach(function(slider) {
     var track = slider.querySelector('.slider-track');
-    var slides = slider.querySelectorAll('.slider-slide');
+    var slides = Array.from(slider.querySelectorAll('.slider-slide'));
     var prevBtn = slider.querySelector('.slider-arrow.prev');
     var nextBtn = slider.querySelector('.slider-arrow.next');
     var total = slides.length;
     var current = 0;
+    var moving = false;
+
+    var firstClone = slides[0].cloneNode(true);
+    var lastClone = slides[total - 1].cloneNode(true);
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, slides[0]);
+
+    var offset = 1;
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(-' + (offset * 100) + '%)';
 
     function updateHeight() {
-        var img = slides[current].querySelector('img');
-        if (img && img.naturalHeight) {
+        var allSlides = track.querySelectorAll('.slider-slide');
+        var img = allSlides[current + offset].querySelector('img');
+        if (img && img.offsetHeight) {
             slider.style.height = img.offsetHeight + 'px';
         }
     }
 
     function goTo(index) {
-        current = (index + total) % total;
-        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        if (moving) return;
+        moving = true;
+        current = index;
+        track.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        track.style.transform = 'translateX(-' + ((current + offset) * 100) + '%)';
         updateHeight();
     }
+
+    track.addEventListener('transitionend', function() {
+        if (current >= total) {
+            current = 0;
+            track.style.transition = 'none';
+            track.style.transform = 'translateX(-' + (offset * 100) + '%)';
+        } else if (current < 0) {
+            current = total - 1;
+            track.style.transition = 'none';
+            track.style.transform = 'translateX(-' + ((current + offset) * 100) + '%)';
+        }
+        moving = false;
+    });
 
     prevBtn.addEventListener('click', function() { goTo(current - 1); });
     nextBtn.addEventListener('click', function() { goTo(current + 1); });
