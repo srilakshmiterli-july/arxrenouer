@@ -848,7 +848,7 @@ p {
 
 /* Case Study */
 .case-study-header {
-    padding: 9rem 3rem var(--spacing-md);
+    padding: 9rem 0 var(--spacing-md);
     max-width: 1200px;
     margin: 0 auto;
 }
