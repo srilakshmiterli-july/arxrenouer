@@ -1341,8 +1341,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 .project-slider {
     position: relative;
     width: 100%;
-    max-width: 1800px;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     background: #0a0a0a;
 }
@@ -1356,8 +1355,8 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 }
 .project-slider .slider-slide img {
     width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: contain;
+    height: 85vh;
+    object-fit: cover;
     display: block;
     cursor: default;
 }
@@ -1426,6 +1425,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     pointer-events: none;
 }
 @media (max-width: 768px) {
+    .project-slider .slider-slide img { height: 50vh; }
     .project-slider .slider-arrow { width: 36px; height: 36px; font-size: 1.2rem; }
     .project-slider .slider-arrow.prev { left: 0.75rem; }
     .project-slider .slider-arrow.next { right: 0.75rem; }
