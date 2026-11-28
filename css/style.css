@@ -1417,18 +1417,21 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 
 /* === Project Story Box === */
 .project-story {
-    max-width: 1800px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 3rem 4rem;
-    background: var(--color-surface, #faf9f7);
-    border-top: 1px solid var(--color-border, #e0dbd5);
+    padding: 3.5rem 4.5rem;
+    background: #3b2f2a;
+    color: #e8e0d8;
+    border-radius: 12px;
+    margin-top: -2px;
 }
 .project-story h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-weight: 500;
     margin: 2.5rem 0 1rem;
-    color: var(--color-text);
+    color: #f5f0eb;
+    letter-spacing: 0.03em;
 }
 .project-story h2:first-child { margin-top: 0; }
 .project-story h3 {
@@ -1436,21 +1439,21 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     font-size: 1rem;
     font-weight: 600;
     margin: 1.5rem 0 0.5rem;
-    color: var(--color-text);
+    color: #e8e0d8;
 }
 .project-story p {
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--color-text-light);
+    color: #c9bfb4;
     margin-bottom: 1rem;
     max-width: 900px;
 }
 .project-story blockquote {
-    border-left: 3px solid var(--color-accent, #4a6741);
+    border-left: 3px solid #8a7560;
     padding-left: 1.5rem;
     margin: 1.5rem 0;
     font-style: italic;
-    color: var(--color-text-light);
+    color: #c9bfb4;
     max-width: 900px;
 }
 .project-story .project-meta {
@@ -1459,11 +1462,14 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     gap: 1rem;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid var(--color-border, #e0dbd5);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .project-story .project-meta p {
     margin: 0;
     font-size: 0.9rem;
+}
+.project-story .project-meta p strong {
+    color: #f5f0eb;
 }
 .project-story .spatial-steps {
     display: grid;
@@ -1489,11 +1495,11 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     margin: 0;
-    color: var(--color-text);
+    color: #f5f0eb;
 }
 .project-story .dimensions-grid .dim-label {
     font-size: 0.85rem;
-    color: var(--color-text-light);
+    color: #c9bfb4;
     margin: 0.25rem 0 0;
 }
 .project-story .skills-demonstrated {
@@ -1501,6 +1507,20 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     flex-wrap: wrap;
     gap: 0.5rem;
     margin: 1rem 0;
+}
+.project-story .skills-demonstrated span {
+    background: rgba(255,255,255,0.08);
+    color: #c9bfb4;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+.project-story ul li strong {
+    color: #f5f0eb;
+}
+.project-story a {
+    color: #c4a97d;
+}
+.project-story a:hover {
+    color: #dbc09a;
 }
 @media (max-width: 768px) {
     .project-story { padding: 2rem 1.5rem; }
