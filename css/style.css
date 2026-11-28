@@ -1450,7 +1450,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 
 /* === Project Story Box === */
 .project-story {
-    max-width: 960px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 3.5rem 3rem;
     background: #3b2f2a;
@@ -1475,7 +1475,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     color: #e8e0d8;
 }
 .project-story p {
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: #c9bfb4;
     margin-bottom: 1rem;
