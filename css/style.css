@@ -1479,7 +1479,6 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     line-height: 1.8;
     color: #c9bfb4;
     margin-bottom: 1rem;
-    max-width: 900px;
 }
 .project-story blockquote {
     border-left: 3px solid #8a7560;
@@ -1487,7 +1486,6 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     margin: 1.5rem 0;
     font-style: italic;
     color: #c9bfb4;
-    max-width: 900px;
 }
 .project-story .spatial-steps {
     display: grid;
