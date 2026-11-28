@@ -1450,7 +1450,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 
 /* === Project Story Box === */
 .project-story {
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 3.5rem 3rem;
     background: #3b2f2a;
