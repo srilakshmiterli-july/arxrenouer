@@ -1352,6 +1352,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 .project-slider .slider-slide {
     min-width: 100%;
     position: relative;
+    align-self: flex-start;
 }
 .project-slider .slider-slide img {
     width: 100%;
