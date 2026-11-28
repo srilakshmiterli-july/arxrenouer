@@ -1452,7 +1452,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 .project-story {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 3.5rem 4.5rem;
+    padding: 3.5rem 3rem;
     background: #3b2f2a;
     color: #e8e0d8;
     border-radius: 12px;
@@ -1475,7 +1475,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     color: #e8e0d8;
 }
 .project-story p {
-    font-size: 1rem;
+    font-size: 1.05rem;
     line-height: 1.8;
     color: #c9bfb4;
     margin-bottom: 1rem;
