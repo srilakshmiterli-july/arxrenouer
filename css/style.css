@@ -1385,36 +1385,8 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 .project-slider .slider-arrow:hover { background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
 .project-slider .slider-arrow.prev { left: 0.5rem; }
 .project-slider .slider-arrow.next { right: 0.5rem; }
-.project-slider .slider-dots {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-    z-index: 10;
-}
-.project-slider .slider-dots .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.5);
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-    padding: 0;
-}
-.project-slider .slider-dots .dot.active { background: #fff; }
-.project-slider .slider-counter {
-    position: absolute;
-    bottom: 1rem;
-    right: 1.5rem;
-    color: rgba(255,255,255,0.7);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
-    z-index: 10;
-}
+.project-slider .slider-dots { display: none; }
+.project-slider .slider-counter { display: none; }
 .project-slider .slide-caption {
     position: absolute;
     bottom: 2.5rem;
