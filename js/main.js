@@ -140,20 +140,63 @@ if (contactForm) {
 (function() {
     var overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
-    overlay.innerHTML = '<button class="lightbox-close" aria-label="Close">&times;</button><img>';
+    overlay.innerHTML = '<button class="lightbox-close" aria-label="Close">&times;</button><button class="lightbox-arrow lb-prev" aria-label="Previous">&#8249;</button><button class="lightbox-arrow lb-next" aria-label="Next">&#8250;</button><img>';
     document.body.appendChild(overlay);
     var lbImg = overlay.querySelector('img');
+    var lbPrev = overlay.querySelector('.lb-prev');
+    var lbNext = overlay.querySelector('.lb-next');
+    var images = [];
+    var lbIndex = 0;
+
     var close = function() { overlay.classList.remove('active'); setTimeout(function(){ overlay.style.display='none'; }, 250); };
-    overlay.addEventListener('click', close);
-    document.querySelectorAll('.case-study-section img').forEach(function(img) {
-        img.addEventListener('click', function() {
-            lbImg.src = this.src;
-            lbImg.alt = this.alt;
-            overlay.style.display = 'flex';
-            requestAnimationFrame(function(){ overlay.classList.add('active'); });
-        });
+
+    function showImage(i) {
+        lbIndex = (i + images.length) % images.length;
+        lbImg.src = images[lbIndex].src;
+        lbImg.alt = images[lbIndex].alt;
+    }
+
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) close();
     });
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+    overlay.querySelector('.lightbox-close').addEventListener('click', close);
+    lbPrev.addEventListener('click', function(e) { e.stopPropagation(); showImage(lbIndex - 1); });
+    lbNext.addEventListener('click', function(e) { e.stopPropagation(); showImage(lbIndex + 1); });
+    lbImg.addEventListener('click', function(e) { e.stopPropagation(); });
+
+    function collectImages() {
+        images = [];
+        document.querySelectorAll('.project-slider .slider-slide:not([data-clone]) img, .case-study-section img').forEach(function(img) {
+            images.push(img);
+        });
+    }
+
+    function openLightbox(img) {
+        collectImages();
+        lbIndex = images.indexOf(img);
+        if (lbIndex < 0) lbIndex = 0;
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        var hasMultiple = images.length > 1;
+        lbPrev.style.display = hasMultiple ? '' : 'none';
+        lbNext.style.display = hasMultiple ? '' : 'none';
+        overlay.style.display = 'flex';
+        requestAnimationFrame(function(){ overlay.classList.add('active'); });
+    }
+
+    document.querySelectorAll('.case-study-section img').forEach(function(img) {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function() { openLightbox(this); });
+    });
+
+    window._openLightbox = openLightbox;
+
+    document.addEventListener('keydown', function(e) {
+        if (overlay.style.display !== 'flex') return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') showImage(lbIndex - 1);
+        if (e.key === 'ArrowRight') showImage(lbIndex + 1);
+    });
 })();
 
 // Project Image Slider
@@ -168,8 +211,20 @@ document.querySelectorAll('.project-slider').forEach(function(slider) {
 
     var firstClone = slides[0].cloneNode(true);
     var lastClone = slides[total - 1].cloneNode(true);
+    firstClone.setAttribute('data-clone', 'true');
+    lastClone.setAttribute('data-clone', 'true');
     track.appendChild(firstClone);
     track.insertBefore(lastClone, slides[0]);
+
+    slides.forEach(function(slide) {
+        var img = slide.querySelector('img');
+        if (img) {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function() {
+                if (window._openLightbox) window._openLightbox(this);
+            });
+        }
+    });
 
     var offset = 1;
     track.style.transition = 'none';
