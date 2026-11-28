@@ -1218,9 +1218,9 @@ h1 em, h2 em, h3 em, .page-title em { font-family: 'Cormorant Garamond', serif; 
 .mk-kick { letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.4rem; }
 .mk-hero h1 { color: #fff; font-family: 'Gloock', serif; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.02; text-shadow: 0 2px 20px rgba(0,0,0,.5), 0 1px 6px rgba(0,0,0,.3); max-width: none; }
 .mk-hero h1 em { color: #F1DCC6; }
-.mk-pill { display: inline-block; background: #fff; color: var(--color-text); border-radius: 30px; padding: 0.7rem 1.4rem; font-weight: 600; font-size: 0.9rem; margin-top: 1rem; }
+.mk-pill { display: inline-block; background: #8A6342; color: #fff; border-radius: 30px; padding: 0.7rem 1.4rem; font-weight: 600; font-size: 0.9rem; margin-top: 1rem; }
 .mk-pill.dark { background: var(--color-text); color: #fff; }
-.mk-pill:hover { background: var(--color-accent); color: #fff; }
+.mk-pill:hover { background: #6e4f35; color: #fff; }
 .mk-wrap { max-width: 1240px; margin: 0 auto; padding: 2.2rem 3rem; }
 .mk-sk { font-size: 0.8rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-accent); font-weight: 600; margin-bottom: 0.8rem; }
 .mk-sk.light { color: #D3BCA7; }
