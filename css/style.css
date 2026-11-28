@@ -1387,7 +1387,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 .project-slider .slider-arrow.next { right: 0.5rem; }
 .project-slider .slider-dots {
     text-align: center;
-    padding: 1rem 0 0.5rem;
+    padding: 0.5rem 0 0.25rem;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
@@ -1405,7 +1405,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 .project-slider .slider-dots .dot.active { background: rgba(0,0,0,0.6); }
 .project-slider .slider-counter {
     text-align: right;
-    padding: 0.25rem 1.5rem 0.5rem;
+    padding: 0 1.5rem 0.5rem;
     color: rgba(0,0,0,0.4);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.85rem;
