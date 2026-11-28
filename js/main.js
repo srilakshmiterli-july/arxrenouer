@@ -156,6 +156,50 @@ if (contactForm) {
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
 })();
 
+// Project Image Slider
+document.querySelectorAll('.project-slider').forEach(function(slider) {
+    var track = slider.querySelector('.slider-track');
+    var slides = slider.querySelectorAll('.slider-slide');
+    var prevBtn = slider.querySelector('.slider-arrow.prev');
+    var nextBtn = slider.querySelector('.slider-arrow.next');
+    var dotsContainer = slider.querySelector('.slider-dots');
+    var counterCurrent = slider.querySelector('.slider-counter .current');
+    var total = slides.length;
+    var current = 0;
+
+    slides.forEach(function(_, i) {
+        var dot = document.createElement('button');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
+        dot.addEventListener('click', function() { goTo(i); });
+        dotsContainer.appendChild(dot);
+    });
+
+    function goTo(index) {
+        current = (index + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dotsContainer.querySelectorAll('.dot').forEach(function(d, i) {
+            d.classList.toggle('active', i === current);
+        });
+        if (counterCurrent) counterCurrent.textContent = current + 1;
+    }
+
+    prevBtn.addEventListener('click', function() { goTo(current - 1); });
+    nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+    var startX = 0;
+    slider.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', function(e) {
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') goTo(current - 1);
+        if (e.key === 'ArrowRight') goTo(current + 1);
+    });
+});
+
 // Navbar compact on scroll
 const navbar = document.querySelector('.navbar');
 if (navbar) {
