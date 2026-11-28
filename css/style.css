@@ -1450,7 +1450,7 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 
 /* === Project Story Box === */
 .project-story {
-    max-width: fit-content;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 3.5rem 3rem;
     background: #3b2f2a;
@@ -1538,7 +1538,24 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
 .project-story a:hover {
     color: #dbc09a;
 }
+.story-columns {
+    display: flex;
+    gap: 0;
+}
+.story-col-left {
+    flex: 1;
+    padding-right: 2.5rem;
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+.story-col-right {
+    flex: 1;
+    padding-left: 2.5rem;
+}
+.story-columns h2:first-child { margin-top: 0; }
 @media (max-width: 768px) {
+    .story-columns { flex-direction: column; }
+    .story-col-left { padding-right: 0; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 2rem; margin-bottom: 2rem; }
+    .story-col-right { padding-left: 0; }
     .project-story { padding: 2rem 1.5rem; }
     .project-story h2 { font-size: 1.5rem; }
 }
