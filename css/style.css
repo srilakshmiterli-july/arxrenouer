@@ -1358,13 +1358,10 @@ img.arx-mark { width: auto !important; height: 90px !important; object-fit: cont
     justify-content: center;
 }
 .project-slider .slider-slide img {
-    max-width: 100%;
-    max-height: 80vh;
-    width: auto;
+    width: 100%;
     height: auto;
     display: block;
     cursor: default;
-    margin: 0 auto;
 }
 .project-slider .slider-arrow {
     position: absolute;
